@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>nova lista</title> 
+  <!-- link para a biblioteca Datepicker aqui -->
+  <link rel="stylesheet" href="/static/css/pagina_listanova.css">
+  <link rel="stylesheet" href="/static/css/pagina_inicio.css">
+</head>
+
+<body>
+<h4>Nova Lista de Compras</h4>
+  
+  <div class="novalistainput">
+  <div class="inputs">
+      <label for=""></label>
+      <input type="text" id="nome_da_lista" placeholder="Nome da Lista">
+  
+      <label for=""></label>
+      <input type="text" id="local_das_compras" placeholder="Local da Compra">
+  
+      <label for=""></label>
+      <input type="number" id="data" placeholder="Data">
+  
+        <!-- botão para abrir o calendário -->
+      <button onclick="mostrarCalendario()">Mostrar Calendário</button><br><br> 
+      <button onclick="adicionarLista()">Salvar</button><br><br>
+</div></div>
+
+<script>
+      function adicionarLista() {
+        // Lógica para salvar a lista (pode ser chamada uma requisição AJAX aqui se necessário)
+        // Redirecionar para 'pagina_lista' após salvar
+        window.location.href = "{{ url_for('pagina_lista') }}";
+      }
+    </script>
+  </body>
+</div>
+<script src="/static/javascript/calendario.js"></script>
+<script src="/static/javascript/pagina_listanova.js"></script>
+</body>
+</html>

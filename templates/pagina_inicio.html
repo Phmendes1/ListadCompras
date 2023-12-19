@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,900&family=Nunito:ital,wght@0,400;0,700;1,400&family=Poppins:wght@200;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/ddea64692c.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/static/css/pagina_inicio.css">
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+  <title>Sistema de lista de compras </title>
+</head>
+
+<body>
+<!-- parte de cima menu, logo, -->
+<div class="sidebar">
+
+<div class="logo-content">
+<div class="logo">
+<img src="/static/images/comprasLg.jpeg" alt="o"></img>
+<div class="logo-name">Lista </div></div>
+<i class='bx bx-menu cursor-pointer' id="btn"></i>
+</div>
+
+<!-- barra de navegar menu -->
+<ul class="nav-list">
+  <li class ="ashu">
+  <i class='bx bx-search'></i>
+  <input type="text" placeholder="Search...">
+  <span class="tooltip">Pesquisar
+  </span>
+  </li>
+
+<!-- menus -->
+<li>
+  <a href="{{ url_for('pagina_listaNova') }}">
+  <i class='bx bx-cart'></i>
+  <span class="links-name">Nova Lista</span>
+  </a>
+  <span class="tooltip">Nova Lista</span>
+</li>
+
+<li>
+  <a href="#">
+  <i class='bx bx-grid-alt'></i>
+  <span class="links-name">Listas</span></a>
+  <span class="tooltip">Listas
+  </span> </li>
+     
+<li>
+  <a href="#">
+  <i class='bx bx-pie-chart-alt-2'></i>
+  <span class="links-name">Financeiro</span> </a>
+  <span class="tooltip">Financeiro
+  </span> </li>
+      
+<li>
+  <a href="#">
+  <i class='bx bx-folder'></i>
+  <span class="links-name">baixar</span> </a>
+  <span class="tooltip">baixar</span>
+  </li>
+
+<li>
+  <a href="#">
+  <i class='bx bx-user'></i>
+  <span class="links-name">perfil </span>
+  </a>
+  <span class="tooltip">Perfil </span>
+</li>
+
+<li>
+  <a href="#">
+  <i class='bx bx-cog'></i>
+  <span class="links-name">Configuracoes</span> </a>
+  <span class="tooltip">Configuracoes 
+  </span> </li>
+
+<li>
+  <a href="#">
+  <i class='bx bx-chat'></i>
+  <span class="links-name">ajuda</span> </a>
+  <span class="tooltip">ajudar
+  </span>
+</li> </ul>
+
+<!-- final do menu -->
+<!-- Altere o botão de log-out para usar a rota '/logout' -->
+<div class="profile-content">
+  <div class="profile">
+    <div class="profile-details">
+      <img src="/static/images/logo_ciesa.jpeg" alt="">
+      <div class="name-job">
+        <div class="name">Ciesa</div>
+        <div class="job">Site Lista de Compras</div>
+      </div>
+    </div>
+    <a href="{{ url_for('logout') }}">
+      <i class='bx bx-log-out cursor-pointer' id="log-out"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Altere o texto "Página Inicial" para exibir o nome da página dinamicamente -->
+<div class="home-content">
+  <div class="text"> pagina inicial</div> <!-- Alteração aqui -->
+</div>
+  
+<!-- botao toca cor de fundo -->
+  <div class="theme-btn">
+    <i class="fas fa-adjust"></i>
+  </div>
+
+  <script src="/static/javascript/pagina_inicio.js"></script>
+
+</body>
+</html>
